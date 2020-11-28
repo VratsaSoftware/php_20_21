@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Forms</title>
+	<style type="text/css">
+		.class-name,
+		.class-name1,
+		.class-name2 {
+			color: #ccc;
+			color1: #ccc;
+			color2: #ccc;
+			color3: #ccc;
+			color4: #ccc;
+			color4: #ccc;
+			color5: #ccc;
+			color7: #ccc;
+			color8: #ccc;
+		}
+
+		.class-name2 {
+			color8: 1236;
+		}
+
+		#id-name {
+			border: 1px solid #F72929;
+		}
+		select.class-name {
+			background-color: #0536EC
+		}
+
+	</style>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<form action="file.php" method="GET" enctype="multipart/form-data">
+		<input class="class-name" type="text" name="first_name" value="" placeholder="First name ..." />
+		<input id="id-name" type="text" name="lastName" value="" placeholder="Last name ..." />
+		<input type="date" name="date"/>
+		<input style="display: block; width: 150px; height: 30px" type="password" />
+		<input type="number"/>
+		<input type="file"/>
+		<input type="hidden">
+		Agree with terms
+		<input type="checkbox" name="" value="agree"/>
+		Disagree with terms
+		<input type="checkbox" name="" value="disagree"/>
+
+		Agree <input type="radio" name="consent" value="agree">
+		Disagree <input type="radio" name="consent" value="disagree">
+		<p>
+			<select name="" class="class-name">
+				<option>-- select --</option>
+				<option value="1">Враца</option>
+				<option value="2">София</option>
+				<option>tyuOption 3</option>
+				<option>werOption 4</option>
+			</select>
+		</p>
+
+		<textarea name="">
+			Your message here ....
+		</textarea>
+
+
+		<input type="submit">		
+	</form>
+
+	<img src="img.png" alt="img" width="200">
+</body>
+</html>
