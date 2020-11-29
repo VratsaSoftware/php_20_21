@@ -1,0 +1,29 @@
+body {
+	background-color: #05F7F4
+}
+
+p {
+	/*background-color: #C9DE67;*/
+	text-align: center
+}
+
+p:nth-of-type(2) {
+	text-align: right
+}
+
+span {
+	display: inline-block;
+	background-color: #4BF829;
+	padding: 50px	
+}
+
+.middle-span {
+	/*padding: 0 100px 100px 0 ;	*/
+	display: none
+
+}
+
+.last-span {
+	/*padding: 0 0 100px 100px;*/
+	display: hidden
+}
