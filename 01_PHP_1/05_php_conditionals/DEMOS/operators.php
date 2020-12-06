@@ -15,5 +15,4 @@ $a = strval( $a );
 
 echo gettype( $a );
 $b = 'aaaaaa';
-
 echo ($a+$b);
