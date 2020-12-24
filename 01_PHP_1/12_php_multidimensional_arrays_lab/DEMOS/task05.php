@@ -6,14 +6,24 @@ $arr = [];
 $rows = 4;
 $cols = 6;
 $num = 1;
+$num = 'a';
 
 
 for( $i = 0; $i < $rows; $i++ ){
 	$arr[$i] = [];
+	
 	for( $j = 0; $j < $cols; $j++ ){
+	//	[1,2,3,4,5,6]
+	//	[7,8,9,...., 12]
+	//[13, 14, ....18]
+		//
 		$arr[$i][$j] = $num;
 		$num++;
+
 	}
+	//7
+	//num = 13
+	//num = 19
 }
 
 // echo "<pre>";
@@ -21,6 +31,7 @@ for( $i = 0; $i < $rows; $i++ ){
 // echo "</pre>";
 
 echo "<table border='1'>";
+
 for( $m = 0; $m < $rows; $m++ ){
 	echo "<tr>";
 	for( $k = 0; $k < $cols; $k++ ){
@@ -30,4 +41,5 @@ for( $m = 0; $m < $rows; $m++ ){
 	}
 	echo "</tr>";
 }
+
 echo "</table>";
