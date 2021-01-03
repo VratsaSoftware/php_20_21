@@ -1,5 +1,5 @@
 <?php 
-include 'assets/functions.php';
+include 'includes/functions.php';
 //inclide_once
 //require
 //require_once

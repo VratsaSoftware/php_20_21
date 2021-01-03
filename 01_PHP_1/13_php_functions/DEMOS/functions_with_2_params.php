@@ -1,5 +1,5 @@
 <?php 
-// include 'assets/functions.php';
+// include 'includes/functions.php';
 
 function print_smth( $tag, $str ){
 	echo "<$tag>";
