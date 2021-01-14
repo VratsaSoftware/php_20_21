@@ -13,6 +13,8 @@ $page_title = 'Game start';
 		<input type="submit" name="submit" value="start">
 	</form>
 	<?php 
+	test();
+	
 	if( isset( $_POST['submit'] ) ){		
 		
 		if( empty( $_POST['name'] ) ){

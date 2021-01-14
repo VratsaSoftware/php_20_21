@@ -7,6 +7,8 @@ $page_title = 'Final results';
 
 	<h3><?php echo $_SESSION['user_name']; ?>, 
 	<?php 
+
+	test();
 		if( $_POST['answer'] == '1' ){
 			$_SESSION['game_result'] += 1;
 		}

@@ -3,6 +3,7 @@ $title = 'question 1';
 $page_title = 'Question 1';
 
 	include 'includes/header.php';
+	test();
 ?>
 
 

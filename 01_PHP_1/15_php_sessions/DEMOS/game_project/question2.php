@@ -1,9 +1,8 @@
 <?php 
 $title = 'question 2';
 $page_title = 'Question 2';
-
 	include 'includes/header.php';
-	include 'includes/functions.php';
+	test();
 ?>
 
 	<a href="session_destroy.php">Exit</a>
