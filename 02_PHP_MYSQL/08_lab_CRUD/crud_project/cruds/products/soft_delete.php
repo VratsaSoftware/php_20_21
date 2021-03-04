@@ -1,9 +1,10 @@
 <?php 
 include '../../includes/db_connect.php';
 
-$current_date =date('Y-m-d');
+
+$current_date = date('Y-m-d');
 // var_dump($current_date);
-$update_query = "UPDATE `units` SET `date_deleted`='". $current_date."' WHERE unit_id=" . $_GET['id'];
+$update_query = "UPDATE `products` SET `date_deleted`= '$current_date' WHERE `product_id`=" . $_GET['id'];
 
 $res = mysqli_query($conn, $update_query);
 
