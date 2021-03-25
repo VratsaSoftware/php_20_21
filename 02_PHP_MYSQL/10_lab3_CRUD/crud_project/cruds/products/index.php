@@ -29,6 +29,9 @@ if( mysqli_num_rows( $result ) > 0 ){
 		<?php
 		$num = 1;
 		while( $row = mysqli_fetch_assoc( $result ) ){
+			echo "<pre>";
+			var_dump( $row );
+			echo "</pre>";
 			?>
 			<tr>
 				<td><?= $num ++ ?></td>
