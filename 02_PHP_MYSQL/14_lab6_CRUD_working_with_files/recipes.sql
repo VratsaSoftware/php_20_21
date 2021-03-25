@@ -2,10 +2,10 @@
 -- version 5.0.4
 -- https://www.phpmyadmin.net/
 --
--- Хост: 127.0.0.1
--- Време на генериране: 14 март 2021 в 21:03
--- Версия на сървъра: 10.4.17-MariaDB
--- Версия на PHP: 8.0.2
+-- Host: 127.0.0.1
+-- Generation Time: Mar 25, 2021 at 09:11 PM
+-- Server version: 10.4.17-MariaDB
+-- PHP Version: 7.4.13
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,18 +18,19 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- База данни: `recipes`
+-- Database: `recipes`
 --
 
 -- --------------------------------------------------------
 
 --
--- Структура на таблица `products`
+-- Table structure for table `products`
 --
 
 CREATE TABLE `products` (
   `product_id` int(11) NOT NULL,
   `product_name` varchar(150) NOT NULL,
+  `product_image` varchar(200) DEFAULT NULL,
   `product_category_id` int(11) DEFAULT NULL,
   `product_price` decimal(7,2) NOT NULL,
   `product_calories` int(6) DEFAULT 10,
@@ -37,32 +38,34 @@ CREATE TABLE `products` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Схема на данните от таблица `products`
+-- Dumping data for table `products`
 --
 
-INSERT INTO `products` (`product_id`, `product_name`, `product_category_id`, `product_price`, `product_calories`, `date_deleted`) VALUES
-(1, 'пилешко месо1', 3, '7.00', 125, NULL),
-(2, 'прясно мляко', 4, '2.00', 178, NULL),
-(3, 'яйца', 4, '0.20', 65, NULL),
-(4, 'брашно', 6, '1.00', 10, NULL),
-(5, 'захар', 6, '1.30', 10, NULL),
-(6, 'сода', 4, '1.00', 10, NULL),
-(7, 'сол', 6, '0.70', 10, NULL),
-(8, 'кисело мляко', 4, '1.00', 80, NULL),
-(9, 'плодово кисело мляко', 4, '1.50', 200, NULL),
-(11, 'червен пипер', 7, '2.00', 10, NULL),
-(12, 'масло', 4, '2.90', 180, NULL),
-(14, 'бананов сок', 8, '4.00', 80, NULL),
-(15, 'ябълков сок', 8, '2.50', 40, NULL),
-(16, 'портокал', 1, '25.00', 125, NULL),
-(17, 'грейпфрут', 1, '2.00', 30, NULL),
-(18, 'ананас', NULL, '2.00', 50, '2021-03-04'),
-(19, 'мандарина', 1, '2.00', 50, NULL);
+INSERT INTO `products` (`product_id`, `product_name`, `product_image`, `product_category_id`, `product_price`, `product_calories`, `date_deleted`) VALUES
+(1, 'пилешко месо1', NULL, 3, '7.00', 125, NULL),
+(2, 'прясно мляко', NULL, 4, '2.00', 178, NULL),
+(3, 'яйца', NULL, 4, '0.20', 65, NULL),
+(4, 'брашно', NULL, 6, '1.00', 10, NULL),
+(5, 'захар', NULL, 6, '1.30', 10, NULL),
+(6, 'сода', NULL, 4, '1.00', 10, NULL),
+(7, 'сол', NULL, 6, '0.70', 10, NULL),
+(8, 'кисело мляко', NULL, 4, '1.00', 80, NULL),
+(9, 'плодово кисело мляко', NULL, 4, '1.50', 200, NULL),
+(11, 'червен пипер', NULL, 7, '2.00', 10, NULL),
+(12, 'масло', NULL, 4, '2.90', 180, NULL),
+(14, 'бананов сок', NULL, 8, '4.00', 80, NULL),
+(15, 'ябълков сок', NULL, 8, '2.50', 40, NULL),
+(16, 'портокал', NULL, 1, '25.00', 125, NULL),
+(17, 'грейпфрут', NULL, 1, '2.00', 30, NULL),
+(18, 'ананас', NULL, NULL, '2.00', 50, '2021-03-04'),
+(19, 'мандарина', NULL, 1, '2.00', 50, NULL),
+(22, 'test', NULL, NULL, '10.00', 10, NULL),
+(23, 'test', '../../uploads/basil.jpg', NULL, '10.00', 10, NULL);
 
 -- --------------------------------------------------------
 
 --
--- Структура на таблица `product_categories`
+-- Table structure for table `product_categories`
 --
 
 CREATE TABLE `product_categories` (
@@ -72,7 +75,7 @@ CREATE TABLE `product_categories` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Схема на данните от таблица `product_categories`
+-- Dumping data for table `product_categories`
 --
 
 INSERT INTO `product_categories` (`product_category_id`, `product_category_name`, `date_deleted`) VALUES
@@ -88,7 +91,7 @@ INSERT INTO `product_categories` (`product_category_id`, `product_category_name`
 -- --------------------------------------------------------
 
 --
--- Структура на таблица `recipes`
+-- Table structure for table `recipes`
 --
 
 CREATE TABLE `recipes` (
@@ -102,7 +105,7 @@ CREATE TABLE `recipes` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Схема на данните от таблица `recipes`
+-- Dumping data for table `recipes`
 --
 
 INSERT INTO `recipes` (`recipe_id`, `recipe_name`, `prep_description`, `prep_time`, `recipe_category_id`, `date_created`, `date_deleted`) VALUES
@@ -150,7 +153,7 @@ INSERT INTO `recipes` (`recipe_id`, `recipe_name`, `prep_description`, `prep_tim
 -- --------------------------------------------------------
 
 --
--- Структура на таблица `recipes_products`
+-- Table structure for table `recipes_products`
 --
 
 CREATE TABLE `recipes_products` (
@@ -162,7 +165,7 @@ CREATE TABLE `recipes_products` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Схема на данните от таблица `recipes_products`
+-- Dumping data for table `recipes_products`
 --
 
 INSERT INTO `recipes_products` (`id`, `recipe_id`, `product_id`, `product_quantity`, `unit_id`) VALUES
@@ -184,7 +187,7 @@ INSERT INTO `recipes_products` (`id`, `recipe_id`, `product_id`, `product_quanti
 -- --------------------------------------------------------
 
 --
--- Структура на таблица `recipe_categories`
+-- Table structure for table `recipe_categories`
 --
 
 CREATE TABLE `recipe_categories` (
@@ -195,7 +198,7 @@ CREATE TABLE `recipe_categories` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Схема на данните от таблица `recipe_categories`
+-- Dumping data for table `recipe_categories`
 --
 
 INSERT INTO `recipe_categories` (`recipe_category_id`, `recipe_category_name`, `date_deleted`, `date_created`) VALUES
@@ -209,7 +212,7 @@ INSERT INTO `recipe_categories` (`recipe_category_id`, `recipe_category_name`, `
 -- --------------------------------------------------------
 
 --
--- Структура на таблица `units`
+-- Table structure for table `units`
 --
 
 CREATE TABLE `units` (
@@ -219,7 +222,7 @@ CREATE TABLE `units` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Схема на данните от таблица `units`
+-- Dumping data for table `units`
 --
 
 INSERT INTO `units` (`unit_id`, `unit_name`, `date_deleted`) VALUES
@@ -234,27 +237,27 @@ INSERT INTO `units` (`unit_id`, `unit_name`, `date_deleted`) VALUES
 --
 
 --
--- Индекси за таблица `products`
+-- Indexes for table `products`
 --
 ALTER TABLE `products`
   ADD PRIMARY KEY (`product_id`),
   ADD KEY `product_category_id` (`product_category_id`);
 
 --
--- Индекси за таблица `product_categories`
+-- Indexes for table `product_categories`
 --
 ALTER TABLE `product_categories`
   ADD PRIMARY KEY (`product_category_id`);
 
 --
--- Индекси за таблица `recipes`
+-- Indexes for table `recipes`
 --
 ALTER TABLE `recipes`
   ADD PRIMARY KEY (`recipe_id`),
   ADD KEY `recipe_category_id` (`recipe_category_id`);
 
 --
--- Индекси за таблица `recipes_products`
+-- Indexes for table `recipes_products`
 --
 ALTER TABLE `recipes_products`
   ADD PRIMARY KEY (`id`),
@@ -263,13 +266,13 @@ ALTER TABLE `recipes_products`
   ADD KEY `unit_id` (`unit_id`);
 
 --
--- Индекси за таблица `recipe_categories`
+-- Indexes for table `recipe_categories`
 --
 ALTER TABLE `recipe_categories`
   ADD PRIMARY KEY (`recipe_category_id`);
 
 --
--- Индекси за таблица `units`
+-- Indexes for table `units`
 --
 ALTER TABLE `units`
   ADD PRIMARY KEY (`unit_id`);
@@ -282,7 +285,7 @@ ALTER TABLE `units`
 -- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
-  MODIFY `product_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+  MODIFY `product_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 
 --
 -- AUTO_INCREMENT for table `product_categories`
@@ -315,23 +318,23 @@ ALTER TABLE `units`
   MODIFY `unit_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
--- Ограничения за дъмпнати таблици
+-- Constraints for dumped tables
 --
 
 --
--- Ограничения за таблица `products`
+-- Constraints for table `products`
 --
 ALTER TABLE `products`
   ADD CONSTRAINT `products_ibfk_1` FOREIGN KEY (`product_category_id`) REFERENCES `product_categories` (`product_category_id`);
 
 --
--- Ограничения за таблица `recipes`
+-- Constraints for table `recipes`
 --
 ALTER TABLE `recipes`
   ADD CONSTRAINT `recipes_ibfk_1` FOREIGN KEY (`recipe_category_id`) REFERENCES `recipe_categories` (`recipe_category_id`);
 
 --
--- Ограничения за таблица `recipes_products`
+-- Constraints for table `recipes_products`
 --
 ALTER TABLE `recipes_products`
   ADD CONSTRAINT `recipes_products_ibfk_1` FOREIGN KEY (`product_id`) REFERENCES `products` (`product_id`),
