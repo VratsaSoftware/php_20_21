@@ -1,3 +1,4 @@
 #	Date	 	Name	   	Link
 01	09.05.21 	JS Intro  	https://www.youtube.com/watch?v=C0YFc7Df6m4&list=PLQFk-VQC2oBZFnDSUuScF8QRm5PHJTeNP&index=2
 02	13.05.21	Conditionals	https://www.youtube.com/watch?v=j_p0R0Hefzw
+03  16.05.21    Arrays,Obj,Loops https://www.youtube.com/watch?v=tikYLTbc4v4
