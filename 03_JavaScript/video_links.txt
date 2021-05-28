@@ -5,3 +5,4 @@
 04  20.05.21    LAB Arrays,OBj,Loops Part 1 https://www.youtube.com/watch?v=YWjk_euK1co
 04  20.05.21    LAB Arrays,OBj,Loops Part 2 https://www.youtube.com/watch?v=t30w5aj0vaA
 05  23.05.21    Functions https://www.youtube.com/watch?v=ObY7mbYF7K4&list=PLQFk-VQC2oBZFnDSUuScF8QRm5PHJTeNP&index=1
+06  27.05.21    Functions Lab https://www.youtube.com/watch?v=_tpJG-WyH6s
