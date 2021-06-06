@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="container" class="container_class">
+            ContainerDiv
+        <div id="innerDiv">
+            innerDiv
+
+        </div>
+    </div>
+    <script type="text/javascript">
+// 1. Напишете JavaScript функция, която създава DOM елемент - параграф с текст.
+// Текстът се подава като параметър на функцията. След създаването на
+// елемента, той се прикачва към елемент с id, който също се подава като
+// параметър на функцията.
+// Input HTML Output HTML
+// <html>
+//createParagraph('wrapper', 'Sometext');
+//
+    function addParagraphToWrapper(wrapper, text){
+        let wrapperElement = document.getElementById(wrapper);
+
+        if(!wrapperElement){
+
+            wrapperElement = document.getElementsByClassName(wrapper);
+
+            if(wrapperElement.length > 0){
+                wrapperElement = wrapperElement[0];
+            }
+            else{
+                console.log('No such ID or Class Found');
+                return false;
+            }
+        }
+
+        let newParagraph = document.createElement("p");
+        newParagraph.style.border = "1px solid red";
+        newParagraph.innerText = text;
+        wrapperElement.appendChild(newParagraph);
+    }
+
+    addParagraphToWrapper('innerDiv', 'Lorem Ipsum Lorem ipsum dolor');
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1> Test Page </h1>
+    <div id="news">
+        <h3>Lorem ipsum 1</h3>
+        <p class="text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Praesent condimentum enim euismod arcu porta, eleifend luctus eros varius.
+            Ut maximus, urna sit amet eleifend porttitor, sapien purus sagittis leo, nec fermentum leo libero vitae velit.
+            Sed sagittis, sem quis mattis tristique, est lorem rutrum ipsum, non tempus erat metus eu nunc. Nulla laoreet molestie aliquet. Curabitur eget tortor fringilla, venenatis ipsum nec, volutpat dui. Suspendisse potenti. Nam volutpat sodales velit, ut consequat mi laoreet ac. Donec semper nec nibh non dapibus. Aliquam commodo tortor sit amet tincidunt ultricies. Donec arcu odio, consectetur nec congue et, vulputate vitae urna. In a lacinia mauris.
+            Duis eleifend massa non finibus vestibulum. Mauris at neque a massa euismod ullamcorper.
+            Curabitur ac vulputate velit. Integer et varius libero. Aliquam libero ipsum, viverra elementum laoreet ac, suscipit ac turpis.
+        </p>
+        <h3>Lorem ipsum 2</h3>
+        <p class="text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Praesent condimentum enim euismod arcu porta, eleifend luctus eros varius.
+            Ut maximus, urna sit amet eleifend porttitor, sapien purus sagittis leo, nec fermentum leo libero vitae velit.
+            Sed sagittis, sem quis mattis tristique, est lorem rutrum ipsum, non tempus erat metus eu nunc. Nulla laoreet molestie aliquet. Curabitur eget tortor fringilla, venenatis ipsum nec, volutpat dui. Suspendisse potenti. Nam volutpat sodales velit, ut consequat mi laoreet ac. Donec semper nec nibh non dapibus. Aliquam commodo tortor sit amet tincidunt ultricies. Donec arcu odio, consectetur nec congue et, vulputate vitae urna. In a lacinia mauris.
+            Duis eleifend massa non finibus vestibulum. Mauris at neque a massa euismod ullamcorper.
+            Curabitur ac vulputate velit. Integer et varius libero. Aliquam libero ipsum, viverra elementum laoreet ac, suscipit ac turpis.
+        </p>
+        <h3>Lorem ipsum 3</h3>
+        <p class="text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Praesent condimentum enim euismod arcu porta, eleifend luctus eros varius.
+            Ut maximus, urna sit amet eleifend porttitor, sapien purus sagittis leo, nec fermentum leo libero vitae velit.
+            Sed sagittis, sem quis mattis tristique, est lorem rutrum ipsum, non tempus erat metus eu nunc. Nulla laoreet molestie aliquet. Curabitur eget tortor fringilla, venenatis ipsum nec, volutpat dui. Suspendisse potenti. Nam volutpat sodales velit, ut consequat mi laoreet ac. Donec semper nec nibh non dapibus. Aliquam commodo tortor sit amet tincidunt ultricies. Donec arcu odio, consectetur nec congue et, vulputate vitae urna. In a lacinia mauris.
+            Duis eleifend massa non finibus vestibulum. Mauris at neque a massa euismod ullamcorper.
+            Curabitur ac vulputate velit. Integer et varius libero. Aliquam libero ipsum, viverra elementum laoreet ac, suscipit ac turpis.
+        </p>
+    </div>
+
+    <div id="articles">
+
+    </div>
+
+    <script>
+        // document.parentNode;
+        // var textAreas = document.getElementsByClassName('text');
+        //
+        // var parentNode = document.getElementById('news');
+        //
+        // var parentNodeTest = document.querySelector('#news');
+        //
+        // var paragraphs = document.getElementsByClassName('text');
+        //
+        // var paragraphsTest = document.querySelectorAll('.text');
+
+        var articleContainer = document.getElementById("articles");
+
+        var articleOne = document.createElement("p");
+        var articleTwo = document.createElement("p");
+        articleTwo.innerHTML = '<h4>I\'m article two</h4>';
+        articleContainer.appendChild(articleOne);
+        articleContainer.appendChild(articleTwo);
+
+        //add element to DOM
+        var searchEnginesList = document.createElement('ul');
+
+        // add id to newly created ul element
+        searchEnginesList.setAttribute("id","searchEnginesUl");
+
+        var searchEngineOne = document.createElement('li');
+        searchEngineOne.innerHTML = '<a href="http://www.google.com">Google</a>';
+        var searchEngineTwo = document.createElement('li');
+        searchEngineTwo.innerHTML = '<a href="http://www.bing.com">Bing</a>';
+        searchEnginesList.appendChild(searchEngineOne);
+        searchEnginesList.appendChild(searchEngineTwo);
+        // articleContainer.appendChild(searchEnginesList);
+        document.body.insertBefore(searchEnginesList, document.body.lastChild);
+
+        //remove Element from DOM
+        var newsContainer = document.getElementById('news');
+
+        //newsContainer.removeChild(newsContainer.lastElementChild);
+        var allNews = document.getElementsByClassName('text');
+        allNews[0].parentNode.removeChild(allNews[0].previousElementSibling);
+        allNews[0].parentNode.removeChild(allNews[0]);
+
+        //modify DOM elements
+        var searchEnginesListElement = document.getElementById('searchEnginesUl');
+        searchEnginesListElement.style.border = "3px solid green";
+        searchEnginesListElement.style.display = "none";
+        searchEnginesListElement.style.display = "block";
+        searchEnginesListElement.style.width = "300px";
+
+
+        // //innerHTML and outerHTML
+        // console.log('innerHTML and outerHTML log below');
+        // console.log(searchEnginesListElement.innerHTML);
+        // console.log(searchEnginesListElement.outerHTML);
+
+        //modify innerHTML
+        searchEnginesListElement.firstElementChild.innerHTML = '<a href="http://www.yandex.ru">Yandex</a>';
+        searchEnginesListElement.lastElementChild.innerHTML = '<a href="http://www.duckduckgo.com">DuckDuckGo</a>';
+
+        //innerHTML and outerHTML
+        console.log('innerHTML and outerHTML log below');
+        console.log(searchEnginesListElement.innerHTML);
+        console.log(searchEnginesListElement.outerHTML);
+
+        //log inner and outer tex
+        console.log('innerTEXT and outerTEXT log below');
+        console.log(searchEnginesListElement.innerText);
+        // console.log(searchEnginesListElement.outerText); //undefined -> not supported in FireFox
+
+        //modify outerHTML demo
+        searchEnginesListElement.lastElementChild.outerHTML = `
+        <ul>
+            <li>
+                <a href="http://www.google.com">Google</a>
+            </li>
+            <li>
+                <a href="http://www.bing.com">Bing</a>
+            </li>
+        </ul>
+        `;
+
+        var lastNestedLi = searchEnginesListElement.lastElementChild.lastElementChild;
+        console.log(lastNestedLi);
+
+        //log inner and outer tex
+        console.log('lastNestedLi inner and outer text');
+        console.log(lastNestedLi.innerText);
+
+        // lastNestedLi.outerText = 'This is outer text';
+        // console.log(lastNestedLi.outerText);
+
+        //DocumentFragment
+        var dFrag = document.createDocumentFragment();
+        var divInFragment = document.createElement('div');
+        divInFragment.innerText = "I'm DIV One";
+        var SecondDivInFragment = document.createElement('div');
+        SecondDivInFragment.innerText = 'I\'m DIV two';
+
+        dFrag.appendChild(divInFragment);
+        dFrag.appendChild(SecondDivInFragment);
+
+        document.body.appendChild(dFrag);
+
+    </script>
+
+</body>
+</html>
