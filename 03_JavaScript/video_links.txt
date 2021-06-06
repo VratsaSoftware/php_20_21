@@ -7,3 +7,5 @@
 05  23.05.21    Functions https://www.youtube.com/watch?v=ObY7mbYF7K4&list=PLQFk-VQC2oBZFnDSUuScF8QRm5PHJTeNP&index=1
 06  27.05.21    Functions Lab https://www.youtube.com/watch?v=_tpJG-WyH6s
 07  30.05.21    ES6 https://www.youtube.com/watch?v=75dV1OMBjNY
+08  03.06.21    DOM Intro https://www.youtube.com/watch?v=3c0SwjkW9OE
+09  06.06.21    DOM Manipulating https://www.youtube.com/watch?v=DxTQXEBlj9Y
