@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<!-- mouseenter -->
+	<!-- mouseleave -->
+	<a id="first-div" href="#">
+		<img src="imgs/angry-emoticon.jpg" width="200">
+	</a>
+	<script type="text/javascript">
+		//domElement
+		let selectedEl = document.getElementById('first-div');
+
+		selectedEl.addEventListener('click', linkIsClicked )
+		
+		function linkIsClicked(e){
+			console.log(e)
+			e.preventDefault()
+			document.querySelector('img').setAttribute('src', 'imgs/hi.jpg');
+			let pEl = document.querySelector('p');
+			pEl.innerText = 'Just kidding!';
+		}
+		
+	</script>
+</body>
+</html>
