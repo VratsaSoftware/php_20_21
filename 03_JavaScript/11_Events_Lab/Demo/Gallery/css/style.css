@@ -1,0 +1,31 @@
+#container{
+    
+    height: 1000px;
+}
+
+#preview{
+    display: inline-block;
+    height: 900px;
+    width: 60%;
+
+}
+
+#icons{
+    display: inline-block;
+    height: 900px;
+    width: 35%;
+
+}
+
+#mainImg{
+    width: 80%;
+}
+
+.gallery li{
+    display:block;
+    width: 90%;
+}
+
+.icon{
+    width: 100px;
+}

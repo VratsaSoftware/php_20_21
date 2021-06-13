@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Gallery</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="container">
+        <h1>Gallery</h1>
+        <div id="preview">
+            <h2>Label</h2>
+            <img id="mainImg" src="" alt="">
+        </div>
+        <div id='icons'>
+            <ul class="gallery">
+                <li>
+                    <h3>dominic-m-contreras</h3>
+                    <img class="icon" src="img/pexels-dominic-m-contreras-1188214.jpg" alt="">
+                </li>
+                <li>
+                    <h3>leah-kelley</h3>
+                    <img class="icon" src="img/pexels-leah-kelley-325521.jpg" alt="">
+                </li>
+                <li>
+                    <h3>pexels-pixabay</h3>
+                    <img  class="icon" src="img/pexels-pixabay-158028.jpg" alt="">
+                </li>
+                <li>
+                    <h3>pexels-snapwire</h3>
+                    <img  class="icon" src="img/pexels-snapwire-618608.jpg" alt="">
+                </li>
+            </ul>
+
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        let mainImg = document.getElementById('mainImg');
+        let firstImgSrc = document.getElementsByClassName('gallery')[0].firstElementChild;
+        firstImgSrc = firstImgSrc.getElementsByTagName('img')[0].src;
+
+        window.onload = function(){
+            mainImg.src = firstImgSrc;
+        }
+    </script>
+
+</body>
+</html>
