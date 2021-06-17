@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<div id="firstDiv"><p>id="notMe"</p></div>
+	<div id="notMe"><p class="my-class">id="notMe"</p></div>
+	<div id="myDiv">my Div</div>
+	
+	<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+	<script type="text/javascript">	
+		//ul>li*2>a>href, class
+		//ul->div#myDiv
+
+		let newEl = '';
+		newEl = '<ul><li><a href="dir.bg" class="some-class">Dir.bg</a></li>';
+		newEl += '<li><a href="abv.bg">Abv.bg</a></li>';
+		newEl += '</ul>';
+
+		$('#myDiv').html( newEl );
+
+		let anchor = $('<a></a>');
+
+		anchor.text('Anchor Tag');
+
+		anchor.attr('href', 'Dir2.bg')
+		anchor.addClass('anchor-class')
+
+//appendTo(), prependTo()
+//append(), prepend()
+		$('')
+
+		console.log( anchor );
+
+
+	</script>
+</body>
+</html>
