@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Gallery</title>
+    <link rel="stylesheet" href="./css/master.css">
+    <script type="text/javascript" src="./bower_components/jquery/dist/jquery.js"></script>
+</head>
+<body>
+    <div>
+        <h1> Gallery </h1>
+        <div class="preview">
+            <img id="mainImg" src="" alt="">
+        </div>
+        <div class="icons">
+            <ul class="gallery">
+                <li>
+                    <h5>dominic-m-contreras</h5>
+                    <img class="icon" src="img/pexels-dominic-m-contreras-1188214.jpg" alt="">
+                </li>
+                <li>
+                    <h5>leah-kelley</h5>
+                    <img class="icon" src="img/pexels-leah-kelley-325521.jpg" alt="">
+                </li>
+                <li>
+                    <h5>pexels-pixabay</h5>
+                    <img  class="icon" src="img/pexels-pixabay-158028.jpg" alt="">
+                </li>
+                <li>
+                    <h5>pexels-snapwire</h5>
+                    <img  class="icon" src="img/pexels-snapwire-618608.jpg" alt="">
+                </li>
+            </ul>
+        </div>
+    </div>
+    <script type="text/javascript">
+        $(document).ready(function() {
+
+            let icons = $('.icon');
+            let firstImgSrc = icons.eq(0).attr('src');
+            let mainImg = $('#mainImg');
+
+            mainImg.attr('src',firstImgSrc);
+
+            icons.on('click', function(){
+                let currentImgSrc = $(this).attr('src');
+                firstImgSrc = currentImgSrc;
+                mainImg.fadeOut('slow', function() {
+                    mainImg.attr('src', currentImgSrc);
+                });
+
+                mainImg.fadeIn('600', function() {
+
+                });
+
+            });
+
+            icons.on('mouseenter', function(){
+                let currentSrc = $(this).attr('src');
+                mainImg.attr('src', currentSrc);
+                
+                //$(this).trigger('click');
+            });
+
+            icons.on('mouseleave', function(){
+                mainImg.attr('src', firstImgSrc);
+            });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        });
+    </script>
+</body>
+</html>

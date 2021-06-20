@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script type="text/javascript" src="./bower_components/jquery/dist/jquery.js"></script>
+</head>
+<body>
+
+    <div>
+    <ul id="list">
+        <li>list item1</li>
+        <span>Hello, I'm Span inside ul</span>
+        <li>list item2</li>
+        <li>list item3</li>
+        <li>list item4</li>
+        <li>list item5</li>
+    </ul>
+
+    </div>
+
+    <script type="text/javascript">
+        // let ul = document.getElementById('list');
+        // ul.addEventListener('click', function (e){
+        //     if(e.target.tagName == 'LI'){
+        //     alert('Clicked on '+e.target);
+        //     console.log(e.target);
+        //     };
+        //     return false;
+        // },false);
+
+        let ul = $('#list');
+        let li = $('li');
+        li.on('click', function(){
+            //alert('Clicked');
+            $(this).css('background-color','blue');
+        });
+
+        // ul.on('click', 'li' ,function (e){
+        //     alert('Clicked');
+        // });
+
+        ul.append('<li>Hello, I\'m new Li</li>');
+
+        // console.log(ul);
+    </script>
+</body>
+</html>

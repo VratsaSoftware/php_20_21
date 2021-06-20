@@ -10,3 +10,4 @@
 08  03.06.21    DOM Intro https://www.youtube.com/watch?v=3c0SwjkW9OE
 09  06.06.21    DOM Manipulating https://www.youtube.com/watch?v=DxTQXEBlj9Y
 11  13.06.21    JS Events Lab https://www.youtube.com/watch?v=Jn_AEfq4JhM
+13  20.06.21    jQuery Events_$(this)   https://www.youtube.com/watch?v=y6LBJkO1lPs
