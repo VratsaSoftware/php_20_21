@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Task3</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <h1>Task3</h1>
+    <ul>
+        <li class="animals">Слон</li>
+        <li class="animals">Лъв</li>
+        <li class="birds">Щъркел</li>
+        <li class="animals">Тигър</li>
+        <li class="birds">Орел</li>
+    </ul>
+
+    <label for="color">Моля изберете цвят</label>
+    <input id="color" type="color" name="color" value="">
+
+    <label for="">Моля изберете животни или птици</label>
+    <select id="creature" class="" name="">
+        <option value="" disabled> ---- </option>
+        <option value="animals">Животни</option>
+        <option value="birds">Птици</option>
+    </select>
+    <!-- <button type="submith" name="button">Go!</button> -->
+
+    <script>
+        $('#creature').on('change', function(e){
+            $('li').css('color','black');
+            let color = $('#color').val();
+            let selectedOption = $('select option:selected').val();
+
+            $('.'+ selectedOption).css('color',color);
+        });
+    </script>
+</body>
+</html>
