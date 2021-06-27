@@ -10,13 +10,15 @@ $('#search-input').on('input', function(e){
         data: 'search=' + searchString,
         dataType: 'json',      
         success: function( response ) {
+          console.log( response )
           let tBody = '';
           $(response).each(function(index, el) {
           	let currentProduct = '';
           	let currentRating = convertRating( el.rating, el.product_id );
           	tBody += '<tr><td>'+(index+1)+'</td>';
           	tBody += '<td>'+ el.name + '</td>';
-          	tBody += '<td class="rating-td">'+ currentRating + '</td></tr>';    
+            tBody += '<td class="rating-td">'+ el.rating + '</td>';    
+            tBody += '<td class="like">'+currentRating+'</td></tr>';    
           });
           	$('tBody').html(tBody);
         },
