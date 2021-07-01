@@ -1,0 +1,33 @@
+<!-- меню съставено от 4 li, във всяко от тях има по един a - елемент, с href и текст, 
+указващ накъде води съответния линк. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<div id="wrapper">
+		
+	</div>
+	<script	>
+		let wrapper = document.getElementById('wrapper'),
+		    ulElement = document.createElement('ul');
+
+		    for( let i = 0; i < 4; i++ ){
+		    	let liElement = document.createElement('li'),
+		    	    aElement  = document.createElement('a');
+
+		    	    aElement.setAttribute('href', 'address' + i );
+		    	    aElement.innerText = 'Link' + i;
+
+		    	    liElement.appendChild( aElement );
+		    	    ulElement.appendChild( liElement );
+		    }
+
+		    wrapper.appendChild( ulElement );
+
+	</script>
+</body>
+</html>
