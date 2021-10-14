@@ -9,9 +9,37 @@
     All posts
 </h2>
 <section>
-    Lorem, 
-    ipsum dolor sit amet consectetur adipisicing elit. 
-    Commodi, quae incidunt beatae ipsum corrupti eos nam laboriosam iusto odit molestiae et, obcaecati soluta nesciunt voluptate, consequuntur vel optio suscipit ex.
-</section>
     
+    <?php 
+    	foreach( $posts as $post ){
+    		echo $post->id ;
+    		echo "<br>";
+    		echo $post->title;
+    		echo "<br>";    		
+    		echo $post->content;
+    		echo "<br>";
+    		echo "<hr>";
+    	}
+
+    	for($i=0; $i<10; $i++){
+
+    	}
+     ?>
+
+     @foreach( $posts as $post )
+     	<?= $post->title?>
+     	<br>
+     	<?= $post->content ?>
+     	<hr>
+     @endforeach
+
+     @for($i=0; $i< 10; $i++)
+     @endfor
+
+
+     @if()
+     @else()
+     @endif
+</section>
+
 @endsection
